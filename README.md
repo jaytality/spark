@@ -12,3 +12,7 @@ This project is a micro-framework, a router that responds to any defined method 
 Deploy this project within the `/code` folder of a [Touchstone](https://github.com/jaytwitch/touchstone) deployment for quick deployment on [Keystone](https://github.com/jaytwitch/keystone)
 
 -----
+
+## Usage
+
+This repo doesn't contain any of the usual keystone/touchstone shell scripts - it's meant to be cloned straight into the `/code` folder of a [Touchstone](https://github.com/jaytwitch/touchstone) deployment, or placed in the www root of a server
