@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
 require ROOT.'/config.php';
 require ROOT.'/R.php';
 
-R::setup(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
+R::setup(getConfig('database.type').':host='.getConfig('database.host').';dbname='.getConfig('database.name'), getConfig('database.user'), getConfig('database.pass'));
 R::ext('xdispense', function ($type) {
     return R::getRedBean()->dispense($type);
 });
