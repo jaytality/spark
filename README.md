@@ -9,9 +9,15 @@
 >
 
 This project is a micro-framework, a router that responds to any defined method (GET, POST, PUT, DELETE, MYCUSTOMHTTPMETHOD) - ideal for API frameworks, or Request Reactive applications.
+
 Deploy this project within the `/code` folder of a [Touchstone](https://github.com/jaytwitch/touchstone) deployment for quick deployment on [Keystone](https://github.com/jaytwitch/keystone)
 
 -----
+
+## Features
+
+* Support for any defined/custom HTTP request method
+* On-the-fly ORM with RedBeanPHP
 
 ## Usage
 
