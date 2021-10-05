@@ -1,13 +1,14 @@
 {
     "require" : {
-        "phpmailer/phpmailer": "~5.2"
+        "phpmailer/phpmailer": "~5.2",
+        "illuminate/database": "^8.62"
     },
     "autoload" : {
         "psr-4": {
-            "spark\\Core\\" : "library/core/",
-            "spark\\Helpers\\" : "library/helpers/",
-            "spark\\Controllers\\" : "app/controllers/",
-            "spark\\Models\\" : "app/models/"
+            "Core\\" : "library/core/",
+            "Helpers\\" : "library/helpers/",
+            "Controllers\\" : "app/controllers/",
+            "Models\\" : "app/models/"
         }
     }
 }
