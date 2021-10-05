@@ -1,6 +1,6 @@
 <?php
 
-namespace spark\Core;
+namespace Core;
 
 use \R as R;
 

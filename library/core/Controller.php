@@ -1,6 +1,6 @@
 <?php
 
-namespace spark\Core;
+namespace Core;
 
 class Controller
 {
@@ -8,7 +8,7 @@ class Controller
     protected $viewData = [];
     protected $view;
 
-    function __construct()
+    public function __construct()
     {
         // default View Options
         $this->viewOpts['page']['layout']  = 'default';

@@ -8,7 +8,7 @@
  * @since v1.0.2014.09.01
  * @version v1.0.2014.09.01
  */
-namespace spark\Core;
+namespace Core;
 
 class Base
 {
@@ -36,7 +36,7 @@ class Base
      *
      * Sets all the variables to whatever is parsed
      */
-    function __construct()
+    public function __construct()
     {
         $this->uri    = $_SERVER['REQUEST_URI'];
         $this->method = strtolower($_SERVER['REQUEST_METHOD']);
