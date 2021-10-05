@@ -10,18 +10,19 @@
 
 This project is a micro-framework, a router that responds to any defined method (GET, POST, PUT, DELETE, MYCUSTOMHTTPMETHOD) - ideal for API frameworks, or Request Reactive applications.
 
-Deploy this project within the `/code` folder of a [Touchstone](https://github.com/jaytwitch/touchstone) deployment for quick deployment on [Keystone](https://github.com/jaytwitch/keystone)
+Deploy this project within the `/code` folder of a [Touchstone](https://github.com/jaytality/touchstone) deployment for quick deployment on [Keystone](https://github.com/jaytality/keystone)
 
 -----
 
 ## Features
 
 * Support for any defined/custom HTTP request method
-* On-the-fly ORM with [RedBeanPHP](https://redbeanphp.com)
+* Now uses `Illuminate/Database` for Capsule Query building and Eloquetn ORM functionality
+* Includes PHPMailer for mail functionality as needed too
 
 ## Usage
 
-This repo doesn't contain any of the usual keystone/touchstone shell scripts - it's meant to be cloned straight into the `/code` folder of a [Touchstone](https://github.com/jaytwitch/touchstone) deployment, or placed in the www root of a server.
+This repo doesn't contain any of the usual keystone/touchstone shell scripts - it's meant to be cloned straight into the `/code` folder of a [Touchstone](https://github.com/jaytality/touchstone) deployment, or placed in the www root of a server.
 
 ### Configuration
 
