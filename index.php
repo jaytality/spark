@@ -1,8 +1,11 @@
 <?php
 
 /**
- * @author Johnathan Tiong [j.tiong@eleague.gg]
- * @copyright 2016-09-01 eLeague Pty Ltd
+ * index.php
+ * main application loader
+ *
+ * @author Johnathan Tiong <johnathan.tiong@gmail.com>
+ * @copyright 2021-10-06
  */
 
 session_start();
@@ -20,25 +23,18 @@ require 'vendor/autoload.php';
 
 // configuration and ORM
 require ROOT.'/config.php';
-require ROOT.'/R.php';
 
-R::setup(getConfig('database.type').':host='.getConfig('database.host').';dbname='.getConfig('database.name'), getConfig('database.user'), getConfig('database.pass'));
-R::ext('xdispense', function ($type) {
-    return R::getRedBean()->dispense($type);
-});
-// echo R::testConnection() ? 'connected to the DB' : 'not connected to the DB'; die();
+$base = new \Core\Base();
 
-$base = new \spark\Core\Base();
-
-// SETUP error logging
-// error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ini_set('log_errors', 1);
-ini_set('display_errors', 1);
+
+if (getConfig('debug')) {
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    ini_set('display_errors', 1);
+}
 
 // SITE TIMEZONE
 date_default_timezone_set('Australia/Sydney');
 
 include ROOT . '/bootstrap.php';
 include ROOT . '/routing.php';
-
-R::close();
