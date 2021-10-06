@@ -9,17 +9,18 @@ if (!function_exists('getConfig')) {
      * @param string $default
      * @return $value
      */
-    function getConfig($name = '', $default = '') {
-        global $sparkConfig;
+    function getConfig($name = '', $default = '')
+    {
+        global $config;
 
         // if no config is loaded, parse the .env.yaml
-        if (empty($sparkConfig)) {
-            $sparkConfig = yaml_parse_file(__DIR__ . '/.env.yaml');
+        if (empty($config)) {
+            $config = yaml_parse_file(__DIR__ . '/.env.yaml');
         }
 
         // if there's no specific variable defined, return whole config array
         if (empty($name)) {
-            return $sparkConfig;
+            return $config;
         }
 
         $keys = explode('.', $name);
@@ -28,7 +29,7 @@ if (!function_exists('getConfig')) {
             return false;
         }
 
-        $value = $sparkConfig;
+        $value = $config;
         foreach ($keys as $key) {
             if (!isset($value[$key])) {
                 $value = !empty($default) ? $default : null;
