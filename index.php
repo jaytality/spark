@@ -14,15 +14,15 @@ session_start();
 define('ROOT', dirname(__FILE__));
 
 // file location constants
-define('ctrlr', ROOT.'/app/controllers');
-define('model', ROOT.'/app/models');
-define('views', ROOT.'/app/views');
+define('ctrlr', ROOT . '/app/controllers');
+define('model', ROOT . '/app/models');
+define('views', ROOT . '/app/views');
 
 // autoload composer
 require 'vendor/autoload.php';
 
 // configuration and ORM
-require ROOT.'/config.php';
+require ROOT . '/config.php';
 
 $base = new \Core\Base();
 

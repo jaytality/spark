@@ -5,5 +5,5 @@ foreach (glob(ROOT."/routes/*.php") as $filename) {
 
 // ERROR: 404
 $base->notFound(function () {
-    \jtAPI\Core\Error::display('404');
+    \Core\Error::display('404');
 });
