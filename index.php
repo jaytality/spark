@@ -1,11 +1,13 @@
 <?php
 
 /**
- * index.php
  * main application loader
  *
+ * created: 2021-10-06
+ * updated:
+ *
  * @author Johnathan Tiong <johnathan.tiong@gmail.com>
- * @copyright 2021-10-06
+ * @copyright 2021 Johnathan Tiong
  */
 
 session_start();
