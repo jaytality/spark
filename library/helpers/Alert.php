@@ -1,6 +1,6 @@
 <?php
 
-namespace spark\Helpers;
+namespace Helpers;
 
 use \R as R;
 

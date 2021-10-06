@@ -8,7 +8,7 @@
  * @copyright 2020 Johnathan Tiong
  *
  */
-namespace spark\Helpers;
+namespace Helpers;
 
 class Country
 {
@@ -265,7 +265,7 @@ class Country
      *
      * @return array
      */
-    function countryList()
+    public function countryList()
     {
         return $this->countries;
     }
@@ -276,17 +276,9 @@ class Country
      * @param string $name
      * @return void
      */
-    function getCode($name = '')
+    public function getCode($name = '')
     {
-        $countries = $this->countries;
-
-        foreach ($countries as $code => $country) {
-            if (strtolower($country) == strtolower($name)) {
-                return $code;
-            }
-        }
-
-        return null;
+        return array_search($name, $this->countries) ?: null;
     }
 
     /**
@@ -295,7 +287,7 @@ class Country
      * @param string $code
      * @return string
      */
-    function getName($code = '')
+    public function getName($code = '')
     {
         $countries = $this->countries;
 

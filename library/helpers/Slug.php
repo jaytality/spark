@@ -8,7 +8,7 @@
  * @copyright 2020 Johnathan Tiong
  *
  */
-namespace spark\Helpers;
+namespace Helpers;
 
 use \R as R;
 

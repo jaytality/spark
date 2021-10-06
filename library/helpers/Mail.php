@@ -9,7 +9,7 @@
  * @copyright 2020 Johnathan Tiong
  *
  */
-namespace spark\Helpers;
+namespace Helpers;
 
 use \PHPMailer as PHPMailer;
 use \R as R;
