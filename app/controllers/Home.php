@@ -2,47 +2,49 @@
 
 // Controller: Home
 
-namespace spark\Controllers;
+namespace Controllers;
 
-use \spark\Core\Controller as Controller;
-
-use \spark\Core\Models\HomeModel as HomeModel;
+use Core\Controller as Controller;
+use Models\User as User;
+use Models\Role as Role;
 
 use \R as R;
 
 class Home extends Controller
 {
-    function getRequest()
+    public function getRequest()
     {
-        /**
-         * You can do view loading here - if you need to show a template
-         */
-		// $this->viewOpts['page']['content'] = 'home/index';
-        // $this->view->load($this->viewOpts, $this->viewData);
-
-        /**
-         * API style response
-         */
-        $data = [
-            'response' => 'Hello, human'
-        ];
-
-        echo json_encode($data);
+        $this->viewOpts['page']['content'] = 'home/index';
+        $this->view->load($this->viewOpts, $this->viewData);
         return;
-        // end of API style response
     }
 
-    function postRequest()
+    public function postRequest()
     {
         if (empty($_POST)) {
             echo "no data!";
             return;
         } else {
-            // do something fancy
+            echo '<h1>POST request received!</h1>';
+            echo '<p>here is the data you sent:</p>';
+            echo '<pre>';
+            echo print_r($_POST, true);
+            echo '</pre>';
         }
     }
 
-    function apiPostRequest()
+    public function apiGetRequest()
+    {
+        // assign $data to the incoming POST data
+        $data = [
+            "hello" => "world!"
+        ];
+
+        echo 'GET REQUEST: ' . '<pre>' . print_r($data, true);
+        return;
+    }
+
+    public function apiPostRequest()
     {
         // assign $data to the incoming POST data
         $data = json_decode(file_get_contents('php://input'), true);
@@ -51,4 +53,3 @@ class Home extends Controller
         return;
     }
 }
-
