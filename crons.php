@@ -7,8 +7,18 @@
  * any scripts that need to run
  *
  * created: 2021-10-07
- * updated:
+ * updated: 2021-10-11
  *
  * @author Johnathan Tiong <johnathan.tiong@gmail.com>
  * @copyright 2021 Johnathan Tiong
  */
+
+class CronJob
+{
+    //
+}
+
+// load all the files from the crons/ folder
+foreach (glob(ROOT."/crons/*.php") as $filename) {
+    include $filename;
+}
